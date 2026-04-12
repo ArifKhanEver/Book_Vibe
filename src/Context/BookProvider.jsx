@@ -61,10 +61,7 @@ const BookProvider = ({children}) => {
 
     const data = {
         markedBooks,
-        setMarkedBooks,
         handleMarkAsRead,
-        wishedBooks,
-        setWishedBooks,
         handleWishedBooks
     }
 

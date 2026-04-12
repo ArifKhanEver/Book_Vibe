@@ -8,13 +8,13 @@ const BookDetails = () => {
     const {bookIdParams} = useParams();
     const books = useLoaderData();
 
-    const {markedBooks, setMarkedBooks, handleMarkAsRead, handleWishedBooks } = bookContext;
+    const { markedBooks, handleMarkAsRead, handleWishedBooks } = bookContext;
 
 console.log()
 
     const clickedBook = books.find(book=> book.bookId === Number(bookIdParams));
     const { 
-        bookId,image, bookName, author, category, review, 
+        image, bookName, author, category, review, 
         tags, totalPages, publisher, yearOfPublishing, rating 
     } = clickedBook;
     return (
