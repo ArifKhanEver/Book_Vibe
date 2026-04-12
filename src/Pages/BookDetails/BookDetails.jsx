@@ -8,7 +8,7 @@ const BookDetails = () => {
     const {bookIdParams} = useParams();
     const books = useLoaderData();
 
-    const {markedBooks, setMarkedBooks, handleMarkAsRead} = bookContext;
+    const {markedBooks, setMarkedBooks, handleMarkAsRead, handleWishedBooks } = bookContext;
 
 console.log()
 
@@ -87,7 +87,7 @@ console.log()
                         <button onClick={()=>handleMarkAsRead(clickedBook)} className="btn btn-outline border-[#1313134D] px-8 text-lg font-semibold hover:bg-black hover:text-white capitalize">
                             Read
                         </button>
-                        <button className="btn bg-[#50B1C9] hover:bg-[#4396ab] text-white px-8 text-lg font-semibold border-none capitalize">
+                        <button  onClick={()=>handleWishedBooks(clickedBook)}  className="btn bg-[#50B1C9] hover:bg-[#4396ab] text-white px-8 text-lg font-semibold border-none capitalize">
                             Wishlist
                         </button>
                     </div>
