@@ -1,9 +1,12 @@
 import React from 'react';
+import Banner from './Banner';
+import AllBooks from './AllBooks';
 
 const HomePage = () => {
     return (
         <div className='container mx-auto min-h-lvh'>
-            <h1 className='text-2xl'>Home</h1>
+            <Banner></Banner>
+            <AllBooks></AllBooks>
         </div>
     );
 };
