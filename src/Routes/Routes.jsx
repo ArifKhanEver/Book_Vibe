@@ -6,7 +6,6 @@ import ErrorPage from '../Pages/ErrorPage/Errorpage'
 import BookDetails from '../Pages/BookDetails/BookDetails'
 import PagesToRead from '../Pages/PagesToRead/PagesToRead'
 
-
 export const router = createBrowserRouter([
   {
     path:'/',
