@@ -1,5 +1,5 @@
-import React, { createContext, useEffect, useState } from 'react';
-  import { Flip, toast } from 'react-toastify';
+import React, { createContext, useState } from 'react';
+import { Flip, toast } from 'react-toastify';
 import { addReadListToLocalDB, addWishListToLocalDB, getReadListsFromLocalDB, getWishListsFromLocalDB } from '../Utilities/LocalDB';
 
 export const BookContext = createContext();
@@ -32,7 +32,6 @@ const BookProvider = ({children}) => {
     
     }
 
-
     const handleWishedBooks = (currentBook)=> {
 
         const isExistBook = wishedBooks.find(book=> book.bookId == currentBook.bookId);
@@ -64,7 +63,6 @@ const BookProvider = ({children}) => {
         }
     }
 
-
     const data = {
         markedBooks,
         handleMarkAsRead,
@@ -76,7 +74,5 @@ const BookProvider = ({children}) => {
         {children}
     </BookContext.Provider>
 };
-
-
 
 export default BookProvider;

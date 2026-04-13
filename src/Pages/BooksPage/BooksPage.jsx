@@ -23,7 +23,6 @@ const BooksPage = () => {
         filteredWishList = [...wishedBooks].sort((a,b)=> a.yearOfPublishing - b.yearOfPublishing);
     }
 
-
     return (
         <div className="container mx-auto px-6 py-10">
         {/* Header Title */}
