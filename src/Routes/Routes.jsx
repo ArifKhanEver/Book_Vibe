@@ -23,12 +23,12 @@ export const router = createBrowserRouter([
       {
         path:'/bookDetails/:bookIdParams',
         Component: BookDetails,
-        loader: ()=> fetch('/public/booksData.json')
+        loader: ()=> fetch('/booksData.json')
       },
       {
         path:'/pages-to-read',
         Component: PagesToRead,
-        loader: ()=> fetch('/public/booksData.json')
+        loader: ()=> fetch('/booksData.json')
       }
     ],
     errorElement: <ErrorPage></ErrorPage>
