@@ -21,14 +21,14 @@ const PagesToRead = () => {
     const data = useLoaderData();
 
     return (
-        <div className="container mx-auto px-6 py-12" style={{ width: '100%', height: 400 }}>
+        <div className="container mx-auto px-6 py-12" style={{ width: '100%', height: 600 }}>
         <h1 className="text-2xl font-bold mb-4">Pages to read</h1>
         
         
         <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+            <BarChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 10 }}>
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="bookName" />
+            <XAxis dataKey="bookName" interval={0} angle={-35} textAnchor='end' height={170}/>
             <YAxis />
             
             <Bar dataKey="totalPages" shape={<TriangleBar />} label={{ position: 'top' }}>
