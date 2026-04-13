@@ -1,17 +1,21 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
   import { Flip, toast } from 'react-toastify';
+import { addReadListToLocalDB, addWishListToLocalDB, getReadListsFromLocalDB, getWishListsFromLocalDB } from '../Utilities/LocalDB';
 
 export const BookContext = createContext();
 
 
 const BookProvider = ({children}) => {
 
-    const [markedBooks, setMarkedBooks] = useState([]);
-    const [wishedBooks, setWishedBooks] = useState([]);
+    const [markedBooks, setMarkedBooks] = useState(getReadListsFromLocalDB());
+    const [wishedBooks, setWishedBooks] = useState(getWishListsFromLocalDB());
+
 
     const handleMarkAsRead = (currentBook)=> {
 
         const isExistBook = markedBooks.find(book=> book.bookId == currentBook.bookId);
+
+        addReadListToLocalDB(currentBook);
 
         if(isExistBook){
             toast.error('The Book is already in the list',{
@@ -32,6 +36,8 @@ const BookProvider = ({children}) => {
     const handleWishedBooks = (currentBook)=> {
 
         const isExistBook = wishedBooks.find(book=> book.bookId == currentBook.bookId);
+
+        addWishListToLocalDB(currentBook);
 
         const existInMarked = markedBooks.find(book=> book.bookId == currentBook.bookId)
 
@@ -62,6 +68,7 @@ const BookProvider = ({children}) => {
     const data = {
         markedBooks,
         handleMarkAsRead,
+        wishedBooks,
         handleWishedBooks
     }
 

@@ -3,11 +3,13 @@ import { IoLocationOutline } from "react-icons/io5";
 import { LuUsers } from "react-icons/lu";
 import { RiFilePaperLine } from "react-icons/ri";
 
+
 const ListedBook = ({book}) => {
 
 const { bookName, image, author, tags, publisher, totalPages, category, rating, yearOfPublishing} = book;
     return (
         <div>
+
             <div className="card lg:card-side bg-base-100 border border-[#13131326] p-6 gap-8 rounded-2xl">
                 {/* Book Image */}
                 <figure className="bg-[#1313130d] rounded-2xl p-8 lg:w-60">
