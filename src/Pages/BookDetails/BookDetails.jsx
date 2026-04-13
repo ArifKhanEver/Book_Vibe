@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { BookContext } from '../../Context/BookProvider';
 
-
 const BookDetails = () => {
     const bookContext = useContext(BookContext);
     const {bookIdParams} = useParams();
