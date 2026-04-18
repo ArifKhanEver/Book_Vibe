@@ -9,8 +9,6 @@ const BookDetails = () => {
 
     const { markedBooks, handleMarkAsRead, handleWishedBooks } = bookContext;
 
-console.log()
-
     const clickedBook = books.find(book=> book.bookId === Number(bookIdParams));
     const { 
         image, bookName, author, category, review, 

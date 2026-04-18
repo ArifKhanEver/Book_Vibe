@@ -42,7 +42,7 @@ const BookProvider = ({children}) => {
 
 
         if(existInMarked){
-            toast.warning('This Book is Exist in the Read List',{
+            toast.success('This Book is Exist in the Read List',{
                 transition: Flip,
                 theme:"colored"
             })

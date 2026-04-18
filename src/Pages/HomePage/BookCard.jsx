@@ -3,8 +3,7 @@ import { FaRegStar } from 'react-icons/fa';
 import { Link } from 'react-router';
 
 const BookCard = ({ book }) => {
-    // Destructure data from the book object (mock data used below)
-    const { bookId, bookName, author,image, review, totalPages,  tags, category, rating, publisher, yearOfPublishing } = book;
+    const { bookId, bookName, author,image,  tags, category, rating } = book;
 
     return (
         <Link to={`/bookDetails/${bookId}`} className="card w-full bg-base-100 border border-[#13131326] p-6 rounded-2xl">
